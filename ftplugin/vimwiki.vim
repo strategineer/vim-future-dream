@@ -1,4 +1,5 @@
 """ Mappings
+unmap <SPACE>
 nnoremap <silent><buffer> <SPACE> <Plug>VimwikiFollowLink
 
 """ Formatting
