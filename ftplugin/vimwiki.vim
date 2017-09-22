@@ -1,5 +1,5 @@
 """ Mappings
-nnoremap <buffer> <SPACE> <ENTER>
+nmap <buffer> <SPACE> <ENTER>
 
 """ Formatting
 autocmd BufWritePre <buffer> :call CleanExtraSpaces()
