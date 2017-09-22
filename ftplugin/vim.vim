@@ -1,5 +1,6 @@
 """ Set folding
-setlocal fdm=expr:fdl=0
+setlocal fdm=expr
+setlocal fdl=0
 setlocal fde=getline(v\:lnum)=~'^""'?'>'.(matchend(getline(v\:lnum),'""*')-2)\:'='
 
 """ Tagbar
