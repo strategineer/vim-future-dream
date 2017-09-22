@@ -12,4 +12,5 @@ autocmd BufEnter <buffer> nested :call tagbar#autoopen(0)
 "And if you want to open Tagbar only for specific filetypes, not for all of the supported ones:
 autocmd FileType <buffer> nested :TagbarOpen
 
+""" Formatting
 autocmd BufWritePre <buffer> :normal gg=G

@@ -1,3 +1,9 @@
+""" Set folding
+setlocal fdm=expr:fdl=0
+setlocal fde=getline(v\:lnum)=~'^""'?'>'.(matchend(getline(v\:lnum),'""*')-2)\:'='
+
+""" Tagbar
+:autocmd BufWritePre *.html :normal gg=G
 " If you want to open it only if you're opening Vim with a supported file/cs,py,snippets use this instead:
 autocmd VimEnter <buffer> nested :call tagbar#autoopen(1)
 " The above is exactly what the Taglist plugin does if you set the Tlist_Auto_Open option, in case you want to emulate this behaviour.
