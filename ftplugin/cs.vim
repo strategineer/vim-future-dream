@@ -1,2 +1,2 @@
 " Enable the tagbar
-source ../lib/enable_tagbar.vim
+source '../lib/enable_tagbar.vim'
