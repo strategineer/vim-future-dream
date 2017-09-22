@@ -1,7 +1,7 @@
 """ Set folding
 setlocal foldmethod=expr
 setlocal foldlevel=0
-setlocal foldexpr=getline(v\:lnum)=~'^""'?'>'.(matchend(getline(v\:lnum),'""*')-2)\:'='
+setlocal foldexpr=getline(v:lnum)=~'^\"\"'?'>'.(matchend(getline(v:lnum),'\"\"*')-2):'='
 
 """ Tagbar
 " If you want to open it only if you're opening Vim with a supported file/cs,py,snippets use this instead:
