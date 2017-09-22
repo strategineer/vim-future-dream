@@ -1,7 +1,7 @@
 """ Mappings
-nnoremap <buffer> X <C-SPACE>
-nmap <buffer> <SPACE> <ENTER>
-nmap <buffer> <C-SPACE> <BS>
+nmap <buffer> X <Plug>VimwikiToggleListItem
+nmap <buffer> <SPACE> <Plug>VimwikiFollowLink
+nmap <buffer> <C-SPACE> <Plug>VimwikiGoBackLink
 
 """ Formatting
 autocmd BufWritePre <buffer> :call CleanExtraSpaces()
