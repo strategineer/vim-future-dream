@@ -28,24 +28,24 @@ setlocal splitbelow
 let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
 
 "The following commands are contextual, based on the current cursor position.
-nnoremap <buffer> gd :OmniSharpGotoDefinition<cr>
-nnoremap <buffer> <leader>fu :OmniSharpFindUsages<cr>
+nnoremap <unique> <buffer> gd :OmniSharpGotoDefinition<cr>
+nnoremap <unique> <buffer> <leader>fu :OmniSharpFindUsages<cr>
 
 " cursor can be anywhere on the line containing an issue
-nnoremap <buffer> <leader>ci :OmniSharpFixIssue<cr>
-nnoremap <buffer> <leader>cu :OmniSharpFixUsings<cr>
-nnoremap <buffer> <leader>dc :OmniSharpDocumentation<cr>
+nnoremap <unique> <buffer> <leader>ci :OmniSharpFixIssue<cr>
+nnoremap <unique> <buffer> <leader>cu :OmniSharpFixUsings<cr>
+nnoremap <unique> <buffer> <leader>dc :OmniSharpDocumentation<cr>
 
 " Contextual code actions (requires CtrlP or unite.vim)
-nnoremap <buffer> <leader>ca :OmniSharpGetCodeActions<cr>
+nnoremap <unique> <buffer> <leader>ca :OmniSharpGetCodeActions<cr>
 " Run code actions with text selected in visual mode to extract method
-vnoremap <buffer> <leader>ca :call OmniSharp#GetCodeActions('visual')<cr>
+vnoremap <unique> <buffer> <leader>ca :call OmniSharp#GetCodeActions('visual')<cr>
 
 " rename with dialog
-nnoremap <buffer> <leader>nm :OmniSharpRename<cr>
+nnoremap <unique> <buffer> <leader>nm :OmniSharpRename<cr>
 
 " Force OmniSharp to reload the solution. Useful when switching branches etc.
-nnoremap <buffer> <leader>rl :OmniSharpReloadSolution<cr>
+nnoremap <unique> <buffer> <leader>rl :OmniSharpReloadSolution<cr>
 
 " this setting controls how long to wait (in ms) before fetching type / symbol information.
 setlocal updatetime=500
