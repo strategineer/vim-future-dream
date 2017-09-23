@@ -1,5 +1,5 @@
 """ AutoCompile
-autocmd BufWritePost <buffer> :VimtexCompile
+autocmd BufWritePost <buffer> :VimtexCompileSS
 
 """ Formatting
 autocmd BufWritePre <buffer> :call CleanExtraSpaces()
