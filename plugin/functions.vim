@@ -4,6 +4,10 @@ fun! EnableTagBar()
     TagbarOpen
 endfun
 
+fun! EnableTicComputer()
+    noremap <leader>tt !tic -code %:s
+endfun
+
 """ Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
     let save_cursor = getpos(".")
