@@ -5,7 +5,7 @@ fun! EnableTagBar()
 endfun
 
 fun! EnableTicComputer()
-    noremap <leader>tt !tic -code %:s
+    noremap <leader>tt !tic -code %
 endfun
 
 """ Delete trailing white space on save, useful for some filetypes ;)
