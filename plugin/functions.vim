@@ -6,7 +6,7 @@ endfun
 
 """ TicComputer
 fun! EnableTicComputer()
-    nnoremap <buffer> <silent> <leader>tt :!tic -code %<CR>
+    nnoremap <buffer> <silent> <leader>tt :!tic expand('%:r').tic -code %<CR>
 endfun
 
 """ Delete trailing white space on save, useful for some filetypes ;)
