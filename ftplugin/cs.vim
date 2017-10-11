@@ -51,5 +51,4 @@ nnoremap <unique> <buffer> <leader>rl :OmniSharpReloadSolution<cr>
 setlocal updatetime=500
 
 """ Formatting
-autocmd BufWritePre <buffer> :normal gg=G
 autocmd BufWritePre <buffer> :call CleanExtraSpaces()
