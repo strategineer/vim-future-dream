@@ -1,7 +1,7 @@
 """ TagBar
 fun! EnableTagBar()
     "And if you want to open Tagbar only for specific filetypes, not for all of the supported ones:
-    TagbarOpen
+    " TagbarOpen
 endfun
 
 """ TicComputer
