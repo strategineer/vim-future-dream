@@ -2,4 +2,4 @@
 call EnableTagBar()
 """ Formatting
 autocmd BufWritePre <buffer> :call CleanExtraSpaces()
-autocmd BufWritePre <buffer> :call 0,$!yapf --style google
+autocmd BufWritePre <buffer> :0,$!yapf --style google
