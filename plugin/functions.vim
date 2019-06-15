@@ -17,3 +17,13 @@ fun! CleanExtraSpaces()
     call setpos('.', save_cursor)
     call setreg('/', old_query)
 endfun
+
+""" Run Yapf
+fun! RunYapf()
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    silent! %s/\s\+$//e
+    silent! 0,$!yapf --style google
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
+endfun
