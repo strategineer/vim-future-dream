@@ -17,13 +17,3 @@ fun! CleanExtraSpaces()
     call setpos('.', save_cursor)
     call setreg('/', old_query)
 endfun
-
-""" Formatting for python code
-fun! RunYapf()
-    let save_cursor = getpos(".")
-    let old_query = getreg('/')
-    silent! !yapf -i --style google %
-    silent! w
-    call setpos('.', save_cursor)
-    call setreg('/', old_query)
-endfun
