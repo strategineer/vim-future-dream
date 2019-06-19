@@ -23,7 +23,7 @@ fun! RunYapf()
     let save_cursor = getpos(".")
     let old_query = getreg('/')
     silent! %s/\s\+$//e
-    silent! 0,$!yapf --style google
+    silent! 0,$!yapf --style pep8
     call setpos('.', save_cursor)
     call setreg('/', old_query)
 endfun
