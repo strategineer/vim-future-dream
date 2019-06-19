@@ -27,3 +27,12 @@ fun! RunYapf()
     call setpos('.', save_cursor)
     call setreg('/', old_query)
 endfun
+
+fun! RunGoFmt()
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    silent! %s/\s\+$//e
+    silent! 0,$!gofmt
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
+endfun
