@@ -18,7 +18,7 @@ fun! CleanExtraSpaces()
     call setreg('/', old_query)
 endfun
 
-""" Run Yapf
+""" Code Formatters
 fun! RunYapf()
     let save_cursor = getpos(".")
     let old_query = getreg('/')
@@ -33,6 +33,15 @@ fun! RunGoFmt()
     let old_query = getreg('/')
     silent! %s/\s\+$//e
     silent! 0,$!gofmt
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
+endfun
+
+fun! RunRustFmt()
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    silent! %s/\s\+$//e
+    silent! 0,$!rustfmt
     call setpos('.', save_cursor)
     call setreg('/', old_query)
 endfun
