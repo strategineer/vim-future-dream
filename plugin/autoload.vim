@@ -1,8 +1,8 @@
-function! Grep(...)
-    return system(join([&grepprg] + [expandcmd(join(a:000, ' '))], ' '))
+let cmd = join([&grepprg] + [join(a:000, ' ')], ' ')
+    return system(cmd)
 endfunction
-command! -nargs=+ -complete=file_in_path -bar Grep  cgetexpr Grep(<f-args>)
-command! -nargs=+ -complete=file_in_path -bar LGrep lgetexpr Grep(<f-args>)
+command! -nargs=+ -complete=file_in_path Grep cexpr Grep(<f-args>)
+command! -nargs=+ -complete=file_in_path LGrep lgetexpr Grep(<f-args>)
 augroup quickfix
     autocmd!
     autocmd QuickFixCmdPost cgetexpr cwindow
