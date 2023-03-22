@@ -1,4 +1,6 @@
-let cmd = join([&grepprg] + [join(a:000, ' ')], ' ')
+
+function! Grep(...)
+    let cmd = join([&grepprg] + [join(a:000, ' ')], ' ')
     return system(cmd)
 endfunction
 command! -nargs=+ -complete=file_in_path Grep cexpr Grep(<f-args>)
